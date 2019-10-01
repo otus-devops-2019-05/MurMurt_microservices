@@ -16,3 +16,9 @@ docker-machine - встроенный в докер инструмент для 
 - Запушили образ на docker hub 
     ```docker tag reddit:latest <your-login>/otus-reddit:1.0```
     ```docker push <your-login>/otus-reddit:1.0```
+
+#### HW: Docker: сети, docker-compose (docker-4)
+
+##### Работа с сетью в Docker
+##### Docker-compose
+

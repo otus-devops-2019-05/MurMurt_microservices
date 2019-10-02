@@ -29,3 +29,19 @@ docker-machine - встроенный в докер инструмент для 
 - Создали Docker volume ```docker volume create reddit_db```
 - Запустили образ с volume ```docker run -d --network=reddit --network-alias=post_db \
 --network-alias=comment_db -v reddit_db:/data/db mongo:latest```
+
+
+#### HW: Docker: сети, docker-compose (docker-4)
+
+##### Работа с сетью в Docker
+- Разобрались с работой сети в Docker
+- Создали bridge-сеть в docker 
+##### Docker-compose
+
+- Установили docker-compose на локальную машину
+- Собрали образы приложения reddit с помощью docker-compose
+- Запустить приложение reddit с помощью docker-compose
+
+Q: Узнайте как образуется базовое имя проекта. Можно ли его задать? Если можно то как? 
+A: Дефолтное значение - имя директории с docker-compose.yml. Можно задать используя переменную окружения COMPOSE_PROJECT_NAME
+

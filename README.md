@@ -31,7 +31,7 @@ docker-machine - встроенный в докер инструмент для 
 --network-alias=comment_db -v reddit_db:/data/db mongo:latest```
 
 
-#### HW: Docker: сети, docker-compose (docker-4)
+### HW: Docker: сети, docker-compose (docker-4)
 
 ##### Работа с сетью в Docker
 - Разобрались с работой сети в Docker
@@ -46,7 +46,7 @@ Q: Узнайте как образуется базовое имя проект
 A: Дефолтное значение - имя директории с docker-compose.yml. Можно задать используя переменную окружения COMPOSE_PROJECT_NAME
 
 
-#### HW: Устройство Gitlab CI. Построение процесса непрерывной поставки (gitlab-ci-1)
+### HW: Устройство Gitlab CI. Построение процесса непрерывной поставки (gitlab-ci-1)
 
 - Создал виртуальную машину (руками в ui)
 - Установил docker на хост через ansible
@@ -55,3 +55,12 @@ A: Дефолтное значение - имя директории с docker-c
 - Создал CI/CD Pipeline
 - Настроил Runner для запуска pipeline (нужен токен)
 - Добавил окружения
+
+
+### HW: Введение в мониторинг
+
+- Создал докер-хост в GCP
+- Запустил и протестировал образ prometeus.
+- Создал docker-compose файл с prometeus
+- Образы запушил на docker-hub https://cloud.docker.com/u/igataullin/repository/list
+- Добавил job node_exporter для отдачи метрик prometeus

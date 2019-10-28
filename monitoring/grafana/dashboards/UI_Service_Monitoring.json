@@ -85,24 +85,28 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(post_count[1h])",
+          "expr": "ui_request_count",
           "format": "time_series",
-          "hide": false,
           "intervalFactor": 1,
           "refId": "A"
         },
         {
-          "expr": "rate(comment_count[1h])",
+          "expr": "rate(ui_request_count{http_status=~\"^[45].*\"}[1m])",
           "format": "time_series",
-          "hide": false,
           "intervalFactor": 1,
           "refId": "B"
+        },
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(ui_request_latency_seconds_bucket[5m])) by (le))",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "refId": "C"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Business_Logic_Monitoring",
+      "title": "HTTP Requests info",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -136,6 +140,7 @@
       ]
     }
   ],
+  "refresh": false,
   "schemaVersion": 16,
   "style": "dark",
   "tags": [],
@@ -172,7 +177,7 @@
     ]
   },
   "timezone": "",
-  "title": "Business_Logic_Monitoring",
-  "uid": "bloRqPKWk",
-  "version": 2
+  "title": "UI_Service_Monitoring",
+  "uid": "RB-aBEFZz",
+  "version": 3
 }

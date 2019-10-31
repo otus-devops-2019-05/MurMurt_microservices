@@ -64,3 +64,11 @@ A: Дефолтное значение - имя директории с docker-c
 - Создал docker-compose файл с prometeus
 - Образы запушил на docker-hub https://cloud.docker.com/u/igataullin/repository/list
 - Добавил job node_exporter для отдачи метрик prometeus
+
+
+### Мониторинг приложения и инфраструктуры
+ - Мониторинг контейнеров
+ - Сбор и визуализациция метрик
+ - Алертинг: настройка, проверка.
+
+  URL к проектам https://cloud.docker.com/u/igataullin/repository/list
